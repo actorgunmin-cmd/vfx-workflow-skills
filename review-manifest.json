@@ -1,0 +1,460 @@
+{
+  "profile": "https://www.instagram.com/hyun2ai/",
+  "review_date": "2026-11-07",
+  "profile_post_count": 33,
+  "reviewed_posts": 33,
+  "reels_tab_count": 14,
+  "reels_extra_posts": 0,
+  "scope": "계정 피드 33개와 릴스 탭 14개. 릴스는 대표 재생 화면을 검토했으며 모든 프레임/음성의 전체 전사는 하지 않았다. 캐러셀은 마지막 슬라이드까지 열람했다. 댓글은 화면에 로드된 일부만 참고했다. 스토리·삭제/비공개 게시물·유료 강의·연결된 다른 계정 전체는 포함하지 않는다.",
+  "provenance": "공개 기능에서 독립 재구성한 26개와 사용자 요청 추가 4개, 총 30개 지침 스킬. 원본 SKILL.md/내부 코드의 추출본이 아니다.",
+  "runtime_validation": "구조·보조 스크립트의 합성 데이터 테스트를 검증했다. 실제 촬영 영상 전체 실행, COLMAP/Blender/AE/FFmpeg 렌더와 GPU 매팅·생성은 미검증이다.",
+  "public_post_skill_count": 26,
+  "user_requested_skill_count": 4,
+  "additions": [
+    {
+      "name": "vfx-ai-source-match",
+      "origin": "user-request; independently designed from official technical documentation"
+    },
+    {
+      "name": "vfx-source-color-match",
+      "origin": "user-request; independently designed from official technical documentation"
+    },
+    {
+      "name": "vfx-precision-roto",
+      "origin": "user-request; independently designed from official technical documentation"
+    },
+    {
+      "name": "vfx-original-restore",
+      "origin": "user-request; independently designed from official technical documentation"
+    }
+  ],
+  "posts": [
+    {
+      "index": 1,
+      "id": "DfZB_0MhCKN",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DfZB_0MhCKN/",
+      "type": "reel",
+      "topic": "코드 기반 천막 시뮬레이션",
+      "observation": "COLMAP 정렬, 메시/천, 재질, 그림자, 실사 합성.",
+      "skills": [
+        "vfx-shot-pipeline",
+        "colmap-vfx",
+        "vfx-surface-track",
+        "vfx-procedural-3d",
+        "vfx-cloth-sim",
+        "vfx-temporal-finish"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 2,
+      "id": "DfZBUeOJkQY",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DfZBUeOJkQY/",
+      "type": "reel",
+      "topic": "코드 기반 비눗방울/3D 실험",
+      "observation": "DCC 없이 코드로 3D와 시뮬레이션. COLMAP/PnP, GLSL/OpenGL 언급.",
+      "skills": [
+        "colmap-vfx",
+        "vfx-pnp-track",
+        "vfx-procedural-3d"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 3,
+      "id": "DfRBC-Ch_EQ",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DfRBC-Ch_EQ/",
+      "type": "reel",
+      "topic": "에이전트와 오픈소스 도구",
+      "observation": "에이전트에서 도구를 직접 실행하고 패키징하는 개념 설명.",
+      "skills": [
+        "vfx-ae-automation",
+        "vfx-comfy-workflow"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 4,
+      "id": "DfPR7UWu6Lq",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DfPR7UWu6Lq/",
+      "type": "reel",
+      "topic": "자연어 키잉 자동화",
+      "observation": "머리카락, 얇은 천, 유리의 키잉 및 후속 despill. 정확한 저장소명은 미공개.",
+      "skills": [
+        "vfx-keying-despill"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 5,
+      "id": "DfO93snucyS",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DfO93snucyS/",
+      "type": "reel",
+      "topic": "온라인 수업 소개",
+      "observation": "합성 원리와 AI 실험 중심의 강의 소개. 공개된 기술 레시피는 제한적.",
+      "skills": [
+        "vfx-shot-pipeline"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 6,
+      "id": "DeYSS_vGGbc",
+      "url": "https://www.instagram.com/hyun2xyz/p/DeYSS_vGGbc/",
+      "type": "p",
+      "topic": "FOOH·리무브 자동화",
+      "observation": "COLMAP/CoTracker/OpenCV와 AE/Blender. 링, 공, 창문/표지판/그림 제거 등 6개 슬라이드.",
+      "skills": [
+        "colmap-vfx",
+        "vfx-pnp-track",
+        "vfx-surface-track",
+        "vfx-fooh-composite",
+        "vfx-clean-plate",
+        "vfx-ae-automation"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 7,
+      "id": "Dc9UplPzV4e",
+      "url": "https://www.instagram.com/hyun2xyz/reel/Dc9UplPzV4e/",
+      "type": "reel",
+      "topic": "Glow Jam",
+      "observation": "깊이 추정과 리라이팅. Distill Any Depth Base, C++ ONNX Runtime 언급.",
+      "skills": [
+        "vfx-depth-relight"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 8,
+      "id": "DXwJ2sJRFFa",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DXwJ2sJRFFa/",
+      "type": "reel",
+      "topic": "관중 합성·조명 제거",
+      "observation": "기준 프레임, V2V, 업스케일, 컬러/노이즈 매칭, 국소 합성.",
+      "skills": [
+        "vfx-clean-plate",
+        "vfx-local-video-edit",
+        "vfx-temporal-finish"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 9,
+      "id": "DW5HZUYj6bL",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DW5HZUYj6bL/",
+      "type": "reel",
+      "topic": "After Effects MCP",
+      "observation": "에이전트와 AE 제어 테스트 화면. 내부 명령 구현은 미공개.",
+      "skills": [
+        "vfx-ae-automation"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 10,
+      "id": "DWxzR3dEWSb",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DWxzR3dEWSb/",
+      "type": "reel",
+      "topic": "눈 속 무당벌레",
+      "observation": "실사 눈 부위에 작은 그래픽을 합성한 전후/과정.",
+      "skills": [
+        "vfx-surface-track",
+        "vfx-local-video-edit"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 11,
+      "id": "DWq2liIGMn-",
+      "url": "https://www.instagram.com/hyun2xyz/p/DWq2liIGMn-/",
+      "type": "p",
+      "topic": "시계·커피 자국",
+      "observation": "시계 동작 수정 및 커피 자국 추가. 슬라이드 2개.",
+      "skills": [
+        "vfx-surface-track",
+        "vfx-local-video-edit"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 12,
+      "id": "DU3FUxskaQQ",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DU3FUxskaQQ/",
+      "type": "reel",
+      "topic": "인물/오브젝트 제거·배경 생성",
+      "observation": "원본 일부를 제거하고 배경과 사람을 생성한 비교.",
+      "skills": [
+        "vfx-clean-plate",
+        "vfx-background-replace",
+        "vfx-local-video-edit"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 13,
+      "id": "DUv1wNJks_z",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DUv1wNJks_z/",
+      "type": "reel",
+      "topic": "긴 아트워크 확장",
+      "observation": "실사 플레이트를 이어 배치하고 확장한 세로 아트워크.",
+      "skills": [
+        "vfx-plate-extend"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 14,
+      "id": "DUspt_IEbMf",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DUspt_IEbMf/",
+      "type": "reel",
+      "topic": "눈 배경·하늘 교체",
+      "observation": "인물 분리, 깨끗한 배경, 기준 이미지, 보간/리타임, V2V, 업스케일, 인물 복원.",
+      "skills": [
+        "vfx-clean-plate",
+        "vfx-depth-relight",
+        "vfx-background-replace",
+        "vfx-temporal-finish"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 15,
+      "id": "DT436ZFkRde",
+      "url": "https://www.instagram.com/hyun2xyz/p/DT436ZFkRde/",
+      "type": "p",
+      "topic": "일기예보 MV",
+      "observation": "촬영/완성작 포트폴리오 10개 슬라이드. 구체적 AI 레시피는 확인되지 않음.",
+      "skills": [],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 16,
+      "id": "DSCrtSlEVoW",
+      "url": "https://www.instagram.com/hyun2xyz/p/DSCrtSlEVoW/",
+      "type": "p",
+      "topic": "레터링·도마뱀·클리닝",
+      "observation": "레터링 모션, 작은 캐릭터, 클린업과 확장. 슬라이드 10개.",
+      "skills": [
+        "vfx-clean-plate",
+        "vfx-plate-extend",
+        "vfx-motion-lettering"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 17,
+      "id": "DRwqmQuEQYx",
+      "url": "https://www.instagram.com/hyun2xyz/p/DRwqmQuEQYx/",
+      "type": "p",
+      "topic": "Kling O1 배경/소품 변경",
+      "observation": "이미지 레퍼런스, 인물 없는 배경, 로토 재합성, 리라이팅. 슬라이드 5개.",
+      "skills": [
+        "vfx-clean-plate",
+        "vfx-depth-relight",
+        "vfx-background-replace",
+        "vfx-local-video-edit"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 18,
+      "id": "DRgmkoBkfIY",
+      "url": "https://www.instagram.com/hyun2xyz/p/DRgmkoBkfIY/",
+      "type": "p",
+      "topic": "무빙 포토",
+      "observation": "사진의 일부 요소를 그려 넣고 애니메이션한 5개 예시.",
+      "skills": [
+        "vfx-moving-photo"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 19,
+      "id": "DRPV71JkYGB",
+      "url": "https://www.instagram.com/hyun2xyz/p/DRPV71JkYGB/",
+      "type": "p",
+      "topic": "벡터→눈 결정·몰핑",
+      "observation": "8개 조형의 리텍스처, 서리, 시작/끝 프레임, 리타임, GIMM-VFI, 업스케일. 슬라이드 6개.",
+      "skills": [
+        "vfx-vector-retexture",
+        "vfx-start-end-morph",
+        "vfx-temporal-finish"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 20,
+      "id": "DPqm3ZckaXR",
+      "url": "https://www.instagram.com/hyun2xyz/p/DPqm3ZckaXR/",
+      "type": "p",
+      "topic": "오디오 리액티브",
+      "observation": "참조 배치/IPAdapter, 드럼 그래프, 비트 전환, 원형 마스크/글로우. 슬라이드 10개.",
+      "skills": [
+        "vfx-audio-reactive",
+        "vfx-comfy-workflow"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 21,
+      "id": "DO8aZQTke7e",
+      "url": "https://www.instagram.com/hyun2xyz/p/DO8aZQTke7e/",
+      "type": "p",
+      "topic": "배 충돌 VFX",
+      "observation": "배/장애물 시작·끝 이미지, 생성형 충돌, depth/normal 리라이팅, 로토/연기/카메라 흔들림. 슬라이드 6개.",
+      "skills": [
+        "vfx-depth-relight",
+        "vfx-controlled-impact"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 22,
+      "id": "DOvY98skaEO",
+      "url": "https://www.instagram.com/hyun2xyz/p/DOvY98skaEO/",
+      "type": "p",
+      "topic": "파랑점·파랑네모 VFX",
+      "observation": "영상 속 마커/영역으로 변형 위치를 지시한 여러 비교. 슬라이드 8개.",
+      "skills": [
+        "vfx-marker-direct"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 23,
+      "id": "DOfUc5yEd89",
+      "url": "https://www.instagram.com/hyun2xyz/p/DOfUc5yEd89/",
+      "type": "p",
+      "topic": "식물 조형 Start/End",
+      "observation": "식물 레퍼런스 인덱싱, 스타일 통일, 긴 배열, Start/End, 스피드 램핑. 슬라이드 9개.",
+      "skills": [
+        "vfx-plate-extend",
+        "vfx-start-end-morph"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 24,
+      "id": "DOZY7kSk0tq",
+      "url": "https://www.instagram.com/hyun2xyz/p/DOZY7kSk0tq/",
+      "type": "p",
+      "topic": "단편 티저·합성",
+      "observation": "Resolve/Fusion, Runway Aleph, Beeble와 원본 일관성. 참조/의상/콘택트시트 포함 9개 슬라이드.",
+      "skills": [
+        "vfx-depth-relight",
+        "vfx-background-replace",
+        "vfx-character-continuity"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 25,
+      "id": "DOF20STkfR_",
+      "url": "https://www.instagram.com/hyun2xyz/p/DOF20STkfR_/",
+      "type": "p",
+      "topic": "유기적 캐릭터 조형",
+      "observation": "조형과 다각도 이미지, 만화 레퍼런스. 도구/파라미터 상세는 미공개. 슬라이드 3개.",
+      "skills": [
+        "vfx-character-continuity"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 26,
+      "id": "DNi0Cb0Jiqb",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DNi0Cb0Jiqb/",
+      "type": "reel",
+      "topic": "매트에서 빛·잔상 만들기",
+      "observation": "Magic Mask 매트를 글로우/그레인/스톱모션/스케일과 AI 소스로 사용.",
+      "skills": [
+        "vfx-matte-stylize"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 27,
+      "id": "DNaV1wnJo6d",
+      "url": "https://www.instagram.com/hyun2xyz/reel/DNaV1wnJo6d/",
+      "type": "reel",
+      "topic": "EVERYTIME 연속성",
+      "observation": "실사 배경, Flux 계열/캐릭터 시트, 샷별 합성, Start/End, 스크린 소스, AE/Resolve 마감.",
+      "skills": [
+        "vfx-shot-pipeline",
+        "vfx-character-continuity",
+        "vfx-temporal-finish"
+      ],
+      "review": "캡션 및 영상 대표 화면 확인"
+    },
+    {
+      "index": 28,
+      "id": "DMz7VXrJX0P",
+      "url": "https://www.instagram.com/hyun2xyz/p/DMz7VXrJX0P/",
+      "type": "p",
+      "topic": "로토 댄서 텍스처",
+      "observation": "Magic Mask 2 매트, IPAdapter/AnimateDiff, 하늘 위 구름 형상. 슬라이드 4개.",
+      "skills": [
+        "vfx-keying-despill",
+        "vfx-matte-stylize",
+        "vfx-comfy-workflow"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 29,
+      "id": "DMfGAuhJPvf",
+      "url": "https://www.instagram.com/hyun2xyz/p/DMfGAuhJPvf/",
+      "type": "p",
+      "topic": "Act-two 퍼포먼스 전이",
+      "observation": "원본 연기와 캐릭터의 비교 및 캐릭터 이미지. 상세 설정 미공개. 슬라이드 8개.",
+      "skills": [
+        "vfx-performance-transfer"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 30,
+      "id": "DMVW4XEphr5",
+      "url": "https://www.instagram.com/hyun2xyz/p/DMVW4XEphr5/",
+      "type": "p",
+      "topic": "AnimateDiff·IPA·Superbeats",
+      "observation": "참조 이미지와 실험적 오디오/영상 생성. 일관성 한계도 설명. 슬라이드 9개.",
+      "skills": [
+        "vfx-audio-reactive",
+        "vfx-comfy-workflow"
+      ],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 31,
+      "id": "CYQqtsWJo8o",
+      "url": "https://www.instagram.com/hyun2ai/p/CYQqtsWJo8o/",
+      "type": "p",
+      "topic": "과거 영상 포트폴리오",
+      "observation": "10개 슬라이드. 기술 설명이 없어 별도 AI 스킬로 추정하지 않음.",
+      "skills": [],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 32,
+      "id": "B8r042lJvXa",
+      "url": "https://www.instagram.com/hyun2ai/p/B8r042lJvXa/",
+      "type": "p",
+      "topic": "과거 촬영 현장·스틸",
+      "observation": "10개 슬라이드. 기술 설명이 없어 별도 AI 스킬로 추정하지 않음.",
+      "skills": [],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    },
+    {
+      "index": 33,
+      "id": "B6uX970JTsh",
+      "url": "https://www.instagram.com/hyun2ai/p/B6uX970JTsh/",
+      "type": "p",
+      "topic": "Vagabonds party",
+      "observation": "행사 사진 8개. VFX 작업 절차는 확인되지 않음.",
+      "skills": [],
+      "review": "캡션 및 슬라이드 끝까지 확인"
+    }
+  ]
+}

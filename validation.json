@@ -1,0 +1,154 @@
+{
+  "skill_count": 30,
+  "public_post_skills": 26,
+  "user_requested_skills": 4,
+  "structures": [
+    {
+      "name": "colmap-vfx",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-ae-automation",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-ai-source-match",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-audio-reactive",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-background-replace",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-character-continuity",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-clean-plate",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-cloth-sim",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-comfy-workflow",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-controlled-impact",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-depth-relight",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-fooh-composite",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-keying-despill",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-local-video-edit",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-marker-direct",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-matte-stylize",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-motion-lettering",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-moving-photo",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-original-restore",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-performance-transfer",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-plate-extend",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-pnp-track",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-precision-roto",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-procedural-3d",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-shot-pipeline",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-source-color-match",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-start-end-morph",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-surface-track",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-temporal-finish",
+      "structure": "passed"
+    },
+    {
+      "name": "vfx-vector-retexture",
+      "structure": "passed"
+    }
+  ],
+  "helper_tests": [
+    "rotated translated camera: projection and GL basis agree",
+    "COLMAP text: empty observations, noncontiguous IDs, filenames, CLI JSON",
+    "invalid quaternion rejected without writing a result",
+    "silence has no false onsets; rational frame timing retained",
+    "opposite-phase stereo energy preserved; transition and CSV CLI verified",
+    "media helper distinguishes missing input and missing ffprobe",
+    "affine camera perturbation recovered within 0.7 px; textureless frames rejected",
+    "known color gain/offset recovered; fixed shot grade reusable; flat patches rejected",
+    "linear-light over retains alpha endpoints and correct 50% sRGB luminance",
+    "16-bit alpha QC distinguishes empty and soft mattes and records temporal change",
+    "four added CLIs write readable outputs; alignment refuses overwrite"
+  ],
+  "status": "passed",
+  "render_engines_tested": false,
+  "test_environment": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "opencv": "4.11.0"
+  },
+  "limits": [
+    "No original creator skill files were available.",
+    "No production plate or end-to-end COLMAP/Blender/AE/FFmpeg/model execution was tested.",
+    "MatAnyone/MatAnyone 2 GPU inference was not run; alpha QC does not measure ground-truth quality.",
+    "Alignment/color/compositing helpers tested on synthetic stills, not a production video sequence.",
+    "Workflow instructions require installed tools/models or connected services."
+  ]
+}
