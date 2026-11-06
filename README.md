@@ -2,9 +2,9 @@
 
 실사·AI 영상의 트래킹, 분리, 생성 소스, 합성과 마감을 위한 독립 지침 모음이다. **공개 게시물에서 재구성한 26개 + 사용자 요청으로 추가한 4개**로 구성한다. 원본 창작자의 내부 스킬 추출본이나 실행 엔진 모음이 아니며 제휴·동일 구현을 뜻하지 않는다.
 
-[전체 ZIP](hyun2ai-vfx-skills.zip) · [개별 다운로드 목록](index.html) · [검토 기록](REVIEW.md) · [출처/권리 고지](THIRD_PARTY_NOTICES.md) · [기계 판독 검증 기록](validation.json)
+[전체 ZIP](hyun2ai-vfx-skills.zip) · [개별 다운로드 목록](index.html) · [검토 기록](REVIEW.md) · [출처/권리 고지](THIRD_PARTY_NOTICES.md) · [기계 판독 검증 기록](validation.json) · [ZIP SHA-256](SHA256SUMS)
 
-GitHub에서는 `index.html`이 코드로 보일 수 있다. 각 스킬은 아래 표에서 열고, ZIP은 저장소의 **Raw / Download raw file**로 받는다. HTML 다운로드 목록은 전체 ZIP을 풀어 로컬 브라우저에서 열면 개별 다운로드에 사용할 수 있다. 풀린 폴더에는 전체 ZIP 자체가 없으므로 전체 ZIP 링크는 저장소에서 사용한다.
+GitHub에서는 `index.html`이 코드로 보일 수 있다. 각 스킬은 아래 표에서 개별 ZIP으로 받고, 파일 화면의 **Raw / Download raw file**로 받는다. HTML 다운로드 목록은 전체 ZIP을 풀어 로컬 브라우저에서 열면 개별 다운로드에 사용할 수 있다. 풀린 폴더에는 전체 ZIP 자체가 없으므로 전체 ZIP 링크는 저장소에서 사용한다.
 
 ## 설치와 사용
 
@@ -13,7 +13,7 @@ GitHub에서는 `index.html`이 코드로 보일 수 있다. 각 스킬은 아�
 3. 개별 ZIP은 압축을 풀어 나온 `스킬이름/` 폴더 하나를 프로젝트의 `.agents/skills/` 아래에 놓는다. 30개를 모두 설치할 필요는 없다.
 4. 해당 프로젝트를 Codex에서 열어 `$스킬이름`으로 호출한다. 새 스킬이 보이지 않으면 Codex를 다시 시작한다.
 
-저장소를 직접 받은 경우 `skills/` 안에서 원하는 폴더를 프로젝트의 `.agents/skills/`로 복사해도 같다. ZIP에는 열람용 `skills/`와 설치용 `.agents/skills/`가 함께 있으므로 둘을 중복 설치하지 않는다. 사용자 범위는 `~/.agents/skills/`이며 이 패키지가 자동으로 설치하거나 설정을 변경하지 않는다. 경로와 검색 동작은 [OpenAI 공식 스킬 문서](https://learn.chatgpt.com/docs/build-skills)를 따른다.
+이 저장소는 배포 파일을 제공한다. 전체 소스·30개 SKILL.md·Python 보조 코드·검증 도구는 `hyun2ai-vfx-skills.zip` 안에 있다. 먼저 전체 ZIP을 풀면 `skills/`의 원하는 폴더를 프로젝트의 `.agents/skills/`로 복사할 수 있다. ZIP에는 열람용 `skills/`와 설치용 `.agents/skills/`가 함께 있으므로 둘을 중복 설치하지 않는다. 사용자 범위는 `~/.agents/skills/`이며 이 패키지가 자동으로 설치하거나 설정을 변경하지 않는다. 경로와 검색 동작은 [OpenAI 공식 스킬 문서](https://learn.chatgpt.com/docs/build-skills)를 따른다.
 
 ```text
 $colmap-vfx 원본 영상의 카메라를 추적하고, 지면 격자 오버레이로 검수해줘.
@@ -29,36 +29,38 @@ $vfx-original-restore AI 배경에 원본 인물을 복원하고 이중 인물·
 
 | # | 스킬 | 범위 | 필요한 환경 |
 |---|---|---|---|
-| 01 | [`vfx-shot-pipeline`](skills/vfx-shot-pipeline/SKILL.md) | 샷 전체 파이프라인 | ffprobe; 선택한 실행 도구 |
-| 02 | [`colmap-vfx`](skills/colmap-vfx/SKILL.md) | COLMAP 카메라 트래킹 | COLMAP; 포즈 도우미는 Python 표준 라이브러리 |
-| 03 | [`vfx-pnp-track`](skills/vfx-pnp-track/SKILL.md) | PnP 포즈 복원 | OpenCV·NumPy, 실제 K/3D 대응점 |
-| 04 | [`vfx-surface-track`](skills/vfx-surface-track/SKILL.md) | 포인트·평면 트래킹 | OpenCV/CoTracker 또는 설치된 트래커 |
-| 05 | [`vfx-procedural-3d`](skills/vfx-procedural-3d/SKILL.md) | 코드 기반 3D·셰이더 | 선택한 OpenGL/WebGL/코드 렌더러 |
-| 06 | [`vfx-cloth-sim`](skills/vfx-cloth-sim/SKILL.md) | 천막·천 시뮬레이션 | Blender 또는 구현한 PBD/스프링 솔버 |
-| 07 | [`vfx-fooh-composite`](skills/vfx-fooh-composite/SKILL.md) | FOOH·CG 삽입 | Blender 또는 선택한 렌더러·합성기 |
-| 08 | [`vfx-keying-despill`](skills/vfx-keying-despill/SKILL.md) | 키잉·로토·디스필 | 설치된 키어/합성기 |
-| 09 | [`vfx-clean-plate`](skills/vfx-clean-plate/SKILL.md) | 클린 플레이트·리무브 | 패치/트래킹/인페인팅 도구 |
-| 10 | [`vfx-depth-relight`](skills/vfx-depth-relight/SKILL.md) | 뎁스·노멀·리라이팅 | 깊이/노멀 추정기·합성기 |
-| 11 | [`vfx-background-replace`](skills/vfx-background-replace/SKILL.md) | 배경·계절 교체 | 전경 매팅·선택한 V2V/배경 생성기·합성기 |
-| 12 | [`vfx-local-video-edit`](skills/vfx-local-video-edit/SKILL.md) | 국소 생성·소품·눈 디테일 | 트래커·선택한 생성/합성기 |
-| 13 | [`vfx-plate-extend`](skills/vfx-plate-extend/SKILL.md) | 플레이트·긴 아트워크 확장 | 정합/확장 도구·레이어 합성기 |
-| 14 | [`vfx-motion-lettering`](skills/vfx-motion-lettering/SKILL.md) | 레터링·캐릭터 모션 | 벡터/텍스트·애니메이션/합성기 |
-| 15 | [`vfx-moving-photo`](skills/vfx-moving-photo/SKILL.md) | 무빙 포토 | 레이어 합성기 또는 선택한 영상 생성기 |
-| 16 | [`vfx-vector-retexture`](skills/vfx-vector-retexture/SKILL.md) | 벡터 조형 리텍스처 | 벡터 래스터화·마스크 조건 이미지 편집기 |
-| 17 | [`vfx-start-end-morph`](skills/vfx-start-end-morph/SKILL.md) | Start/End 몰핑 | start/end 지원 생성기·선택한 보간기 |
-| 18 | [`vfx-audio-reactive`](skills/vfx-audio-reactive/SKILL.md) | 오디오 리액티브 | PCM WAV; 영상화에는 ComfyUI 등 별도 도구 |
-| 19 | [`vfx-controlled-impact`](skills/vfx-controlled-impact/SKILL.md) | 충돌·폭발 VFX | 선택한 생성기·합성기 |
-| 20 | [`vfx-marker-direct`](skills/vfx-marker-direct/SKILL.md) | 마커 기반 VFX 지시 | 마커 조건을 실제 지원하는 편집/생성 도구 |
-| 21 | [`vfx-matte-stylize`](skills/vfx-matte-stylize/SKILL.md) | 매트→구름·빛·잔상 | 매팅·효과 합성기 또는 조건 지원 생성기 |
-| 22 | [`vfx-character-continuity`](skills/vfx-character-continuity/SKILL.md) | 캐릭터·배경 연속성 | 레퍼런스 지원 이미지/영상 도구 |
-| 23 | [`vfx-performance-transfer`](skills/vfx-performance-transfer/SKILL.md) | 퍼포먼스 전이 | 현재 연기 전이 지원 도구 |
-| 24 | [`vfx-ae-automation`](skills/vfx-ae-automation/SKILL.md) | After Effects 자동화 | After Effects·연결 MCP 또는 허용 스크립트 |
-| 25 | [`vfx-comfy-workflow`](skills/vfx-comfy-workflow/SKILL.md) | ComfyUI 워크플로우 구성 | 실제 ComfyUI·설치 노드·모델 |
-| 26 | [`vfx-temporal-finish`](skills/vfx-temporal-finish/SKILL.md) | 시간 일관성·보간·업스케일·마감 | 선택한 보간/업스케일/인코딩 도구 |
-| 27 | [`vfx-ai-source-match`](skills/vfx-ai-source-match/SKILL.md) | AI·원본 프레임 정렬 | Python·OpenCV·NumPy; 영상 추출/시간 매핑은 별도 |
-| 28 | [`vfx-source-color-match`](skills/vfx-source-color-match/SKILL.md) | 원본 기준 색감·질감 매칭 | Python·OpenCV·NumPy; Log/HDR·질감은 별도 도구 |
-| 29 | [`vfx-precision-roto`](skills/vfx-precision-roto/SKILL.md) | 정밀 실루엣·비디오 매팅 | MatAnyone 계열 별도 Python/모델 환경; QC는 OpenCV·NumPy |
-| 30 | [`vfx-original-restore`](skills/vfx-original-restore/SKILL.md) | AI 배경 위 원본 인물 재합성 | 전경 RGB/alpha; Python·OpenCV·NumPy |
+| 01 | [`vfx-shot-pipeline`](vfx-shot-pipeline.zip) | 샷 전체 파이프라인 | ffprobe; 선택한 실행 도구 |
+| 02 | [`colmap-vfx`](colmap-vfx.zip) | COLMAP 카메라 트래킹 | COLMAP; 포즈 도우미는 Python 표준 라이브러리 |
+| 03 | [`vfx-pnp-track`](vfx-pnp-track.zip) | PnP 포즈 복원 | OpenCV·NumPy, 실제 K/3D 대응점 |
+| 04 | [`vfx-surface-track`](vfx-surface-track.zip) | 포인트·평면 트래킹 | OpenCV/CoTracker 또는 설치된 트래커 |
+| 05 | [`vfx-procedural-3d`](vfx-procedural-3d.zip) | 코드 기반 3D·셰이더 | 선택한 OpenGL/WebGL/코드 렌더러 |
+| 06 | [`vfx-cloth-sim`](vfx-cloth-sim.zip) | 천막·천 시뮬레이션 | Blender 또는 구현한 PBD/스프링 솔버 |
+| 07 | [`vfx-fooh-composite`](vfx-fooh-composite.zip) | FOOH·CG 삽입 | Blender 또는 선택한 렌더러·합성기 |
+| 08 | [`vfx-keying-despill`](vfx-keying-despill.zip) | 키잉·로토·디스필 | 설치된 키어/합성기 |
+| 09 | [`vfx-clean-plate`](vfx-clean-plate.zip) | 클린 플레이트·리무브 | 패치/트래킹/인페인팅 도구 |
+| 10 | [`vfx-depth-relight`](vfx-depth-relight.zip) | 뎁스·노멀·리라이팅 | 깊이/노멀 추정기·합성기 |
+| 11 | [`vfx-background-replace`](vfx-background-replace.zip) | 배경·계절 교체 | 전경 매팅·선택한 V2V/배경 생성기·합성기 |
+| 12 | [`vfx-local-video-edit`](vfx-local-video-edit.zip) | 국소 생성·소품·눈 디테일 | 트래커·선택한 생성/합성기 |
+| 13 | [`vfx-plate-extend`](vfx-plate-extend.zip) | 플레이트·긴 아트워크 확장 | 정합/확장 도구·레이어 합성기 |
+| 14 | [`vfx-motion-lettering`](vfx-motion-lettering.zip) | 레터링·캐릭터 모션 | 벡터/텍스트·애니메이션/합성기 |
+| 15 | [`vfx-moving-photo`](vfx-moving-photo.zip) | 무빙 포토 | 레이어 합성기 또는 선택한 영상 생성기 |
+| 16 | [`vfx-vector-retexture`](vfx-vector-retexture.zip) | 벡터 조형 리텍스처 | 벡터 래스터화·마스크 조건 이미지 편집기 |
+| 17 | [`vfx-start-end-morph`](vfx-start-end-morph.zip) | Start/End 몰핑 | start/end 지원 생성기·선택한 보간기 |
+| 18 | [`vfx-audio-reactive`](vfx-audio-reactive.zip) | 오디오 리액티브 | PCM WAV; 영상화에는 ComfyUI 등 별도 도구 |
+| 19 | [`vfx-controlled-impact`](vfx-controlled-impact.zip) | 충돌·폭발 VFX | 선택한 생성기·합성기 |
+| 20 | [`vfx-marker-direct`](vfx-marker-direct.zip) | 마커 기반 VFX 지시 | 마커 조건을 실제 지원하는 편집/생성 도구 |
+| 21 | [`vfx-matte-stylize`](vfx-matte-stylize.zip) | 매트→구름·빛·잔상 | 매팅·효과 합성기 또는 조건 지원 생성기 |
+| 22 | [`vfx-character-continuity`](vfx-character-continuity.zip) | 캐릭터·배경 연속성 | 레퍼런스 지원 이미지/영상 도구 |
+| 23 | [`vfx-performance-transfer`](vfx-performance-transfer.zip) | 퍼포먼스 전이 | 현재 연기 전이 지원 도구 |
+| 24 | [`vfx-ae-automation`](vfx-ae-automation.zip) | After Effects 자동화 | After Effects·연결 MCP 또는 허용 스크립트 |
+| 25 | [`vfx-comfy-workflow`](vfx-comfy-workflow.zip) | ComfyUI 워크플로우 구성 | 실제 ComfyUI·설치 노드·모델 |
+| 26 | [`vfx-temporal-finish`](vfx-temporal-finish.zip) | 시간 일관성·보간·업스케일·마감 | 선택한 보간/업스케일/인코딩 도구 |
+| 27 | [`vfx-ai-source-match`](vfx-ai-source-match.zip) | AI·원본 프레임 정렬 | Python·OpenCV·NumPy; 영상 추출/시간 매핑은 별도 |
+| 28 | [`vfx-source-color-match`](vfx-source-color-match.zip) | 원본 기준 색감·질감 매칭 | Python·OpenCV·NumPy; Log/HDR·질감은 별도 도구 |
+| 29 | [`vfx-precision-roto`](vfx-precision-roto.zip) | 정밀 실루엣·비디오 매팅 | MatAnyone 계열 별도 Python/모델 환경; QC는 OpenCV·NumPy |
+| 30 | [`vfx-original-restore`](vfx-original-restore.zip) | AI 배경 위 원본 인물 재합성 | 전경 RGB/alpha; Python·OpenCV·NumPy |
+
+개별 ZIP 링크는 각 스킬의 SKILL.md, UI 메타데이터와 해당 보조 코드를 함께 제공한다. 원문을 읽거나 수정하려면 ZIP을 푼다.
 
 ## Python 보조 코드
 
@@ -74,7 +76,7 @@ $vfx-original-restore AI 배경에 원본 인물을 복원하고 이중 인물·
 | `matte_qc.py` | alpha 면적·부분 투명도·프레임 변화 보고 | 매팅 모델 아님; 정답 품질 점수 아님 |
 | `composite_frame.py` | straight RGB+alpha의 linear-light over | SDR sRGB 전용; 정렬·탈오염·매팅 없음 |
 
-처음 3개는 Python 표준 라이브러리를 사용하며 `inspect_plate.py`의 정상 메타데이터 읽기에는 ffprobe가 필요하다. 추가 4개에는 OpenCV·NumPy가 필요하다. 로컬 가상환경 예:
+처음 3개는 Python 표준 라이브러리를 사용하며 `inspect_plate.py`의 정상 메타데이터 읽기에는 ffprobe가 필요하다. 추가 4개에는 OpenCV·NumPy가 필요하다. 전체 ZIP을 푼 디렉터리에서 실행할 로컬 가상환경 예:
 
 ```bash
 python3 -m venv .venv
